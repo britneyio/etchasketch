@@ -1,11 +1,11 @@
 const container = document.getElementById('container');
 
-const gridNum = document.getElementById("gridamount");
-
-let div_num = prompt("How many grids?");
+let div_num = prompt("How many grids? ex. 16, 64, 144,");
 const current = document.getElementById("current");
 current.textContent = "Current number of grids: " + div_num;
 
+container.style.setProperty('grid-template-columns', "repeat("+ Math.round(Math.sqrt(div_num)) + ", .5fr)");
+container.style.setProperty('grid-template-rows', "repeat("+ Math.round(Math.sqrt(div_num)) + ", .5fr)");
 //creates 256 div with a class of square appended to container
 for(let i = 0; i < div_num; i++){
     const div = document.createElement('div');
