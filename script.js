@@ -1,6 +1,6 @@
 const container = document.getElementById('container');
 
-let div_num = prompt("How many grids? ex. 16, 64, 144,");
+let div_num = prompt("How many grids? ex. 4, 16, 64, 144, 256, 512");
 const current = document.getElementById("current");
 current.textContent = "Current number of grids: " + div_num;
 
